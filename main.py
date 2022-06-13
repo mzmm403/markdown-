@@ -36,7 +36,7 @@ def job():
         with open(name,mode='wb') as f:
            f.write(r.content)
     download.close()
-schedule.every().day.at("16:48").do(job)
+schedule.every().day.at("17:00").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
