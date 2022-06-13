@@ -40,3 +40,4 @@ schedule.every().day.at("12:00").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
+print('已经成功完成备份🚀')    
