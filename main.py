@@ -5,7 +5,7 @@ import time
 from bs4 import BeautifulSoup
 def job(): 
     # 爬取主页并获得各组页面网址
-    url = 'https://qldoc.sylu.edu.cn/'
+    url = 'http://qldoc.sylu.edu.cn/'
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
     }
@@ -36,8 +36,11 @@ def job():
         with open(name,mode='wb') as f:
            f.write(r.content)
     download.close()
-schedule.every().day.at("15:25").do(job)
+schedule.every().day.at("16:48").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
-print('您已经成功完成备份🚀')    
+    print('备份以完成🚀')
+    
+
+   
